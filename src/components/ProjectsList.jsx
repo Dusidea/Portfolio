@@ -10,7 +10,7 @@ export default function ProjectsList() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("/projects.json")
+    fetch(import.meta.env.BASE_URL + "/projects.json")
       .then((res) => res.json())
       .then(setProjects)
       .catch(console.error);

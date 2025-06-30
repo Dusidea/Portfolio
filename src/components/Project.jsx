@@ -26,7 +26,7 @@ export default function Project({ projects }) {
             <CardMedia
               component="img"
               // height="140"
-              image={project.preview}
+              image={import.meta.env.BASE_URL + project.preview}
               alt="project preview"
             />
             <CardContent>

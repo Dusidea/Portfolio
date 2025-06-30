@@ -16,7 +16,10 @@ export default function Skills() {
     >
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Icone VsCode" src="../assets/vscode.svg" />
+          <Avatar
+            alt="Icone VsCode"
+            src={import.meta.env.BASE_URL + "/assets/vscode.svg"}
+          />
         </ListItemAvatar>
         <ListItemText>VsCode</ListItemText>
       </ListItem>
