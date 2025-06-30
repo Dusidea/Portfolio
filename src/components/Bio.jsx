@@ -8,9 +8,7 @@ export default function Bio() {
       sx={{
         padding: "25px",
         bgcolor: "primary.light",
-        // border: 1,
         borderRadius: "15px",
-        width: "50%",
       }}
     >
       <p>

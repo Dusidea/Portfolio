@@ -3,7 +3,7 @@ import MyButton from "./MyButton";
 
 export default function Nav() {
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" component={"nav"}>
       <Toolbar sx={{}}>
         <MyButton href="#about">À propos</MyButton>
         <MyButton href="#projects">Mes réalisations</MyButton>

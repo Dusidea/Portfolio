@@ -18,10 +18,10 @@ export default function ProjectsList() {
 
   return (
     <Box id="projects">
-      <Typography variant="h2">Mes projets</Typography>
-      <Masonry spacing={5}>
+      <Typography variant="h2">Mes réalisations</Typography>
+      <Masonry spacing={5} sx={{ marginTop: "5px" }}>
         <Project projects={projects} />
-        <Skills />
+        {/* <Skills /> */}
       </Masonry>
     </Box>
   );

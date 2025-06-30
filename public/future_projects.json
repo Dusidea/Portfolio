@@ -1,6 +1,33 @@
 [
   {
     "id": 1,
+    "slug": "locations",
+    "title": "Site de locations de vacances",
+    "description": "Simulation d’un site de locations avec React et JSON.",
+    "url": "https://dusidea.fr/",
+    "github": "https://github.com/Dusidea/OC_P7_KASA.git",
+    "preview": "assets/Kasa_preview.png"
+  },
+  {
+    "id": 2,
+    "slug": "bank",
+    "title": "Autre projet React",
+    "description": "App bancaire",
+    "url": "https://www.youtube.com/",
+    "github": "https://github.com/Dusidea/P10_ArgentBank-Backend.git",
+    "preview": "assets/Kasa_preview.png"
+  },
+  {
+    "id": 3,
+    "slug": "bluel",
+    "title": "Site de photographe",
+    "description": "Projet JavaScript Vanilla avec formulaires",
+    "url": "https://www.youtube.com/",
+    "github": "https://github.com/Dusidea/OCP6.git",
+    "preview": "assets/Kasa_preview.png"
+  },
+  {
+    "id": 4,
     "slug": "booki",
     "title": "Hébergements de vacances",
     "description": "Interface responsive en HTML et CSS",
@@ -9,7 +36,7 @@
     "preview": "assets/booki_preview.png"
   },
   {
-    "id": 2,
+    "id": 5,
     "slug": "ohmyfood",
     "title": "Réservation de menus",
     "description": "Intégration d'une maquette mobile-first avec des animations CSS",
@@ -18,7 +45,7 @@
     "preview": "assets/ohmyfood_preview.png"
   },
   {
-    "id": 3,
+    "id": 6,
     "slug": "printit",
     "title": "Réservation de menus",
     "description": "Initiation à JavaScript avec carrousel",
