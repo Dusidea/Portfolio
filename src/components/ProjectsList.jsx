@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import Masonry from "@mui/lab/Masonry";
 import Project from "./Project";
+import ProjectSkeleton from "./ProjectSkeleton";
 
 export default function ProjectsList() {
   const [projects, setProjects] = useState([]);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.down("sm")); // <600px
   const isSm = useMediaQuery(theme.breakpoints.between("sm", "md")); // 600-900
@@ -16,10 +23,25 @@ export default function ProjectsList() {
 
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "/projects.json")
-      .then((res) => res.json())
-      .then(setProjects)
-      .catch(console.error);
+      .then((res) => {
+        if (!res.ok) throw new Error("Erreur lors du chargement");
+        return res.json();
+      })
+      .then((data) => {
+        if (!Array.isArray(data)) throw new Error("Format inattendu");
+        setProjects(data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error("Erreur de chargement :", err);
+        setError(err);
+        setIsLoading(false);
+      });
   }, []);
+
+  if (error) {
+    return <Typography color="error">Erreur : {error.message}</Typography>;
+  }
 
   return (
     <Box id="projects">
@@ -27,9 +49,14 @@ export default function ProjectsList() {
         Mes réalisations
       </Typography>
       <Masonry columns={columns} spacing={3}>
-        {projects.map((project) => (
-          <Project key={project.id} project={project} />
-        ))}
+        {/* Displaying skeleton placeholder while loading */}
+        {isLoading
+          ? Array.from({ length: columns * 2 }).map((_, index) => (
+              <ProjectSkeleton key={index} />
+            ))
+          : projects.map((project) => (
+              <Project key={project.id} project={project} />
+            ))}
       </Masonry>
     </Box>
   );

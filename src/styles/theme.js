@@ -1,13 +1,11 @@
 import { createTheme } from "@mui/material/styles";
-
+//   main: "#11B6A5", //teal blue light
+//   main: "#C58130", //orange
+//   main: "#724E36", //brown
+//   main: "#A25F81", //pink
+//   main: "#211820", //purple
 const theme = createTheme({
   palette: {
-    //   main: "#11B6A5", //teal blue light
-    //   main: "#C58130", //orange
-    //   main: "#724E36", //brown
-    //   main: "#A25F81", //pink
-    //   main: "#211820", //purple
-
     primary: {
       main: "#11B6A5", //teal blue light
     },

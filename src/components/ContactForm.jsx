@@ -1,13 +1,12 @@
-import React, { useState, useRef } from "react";
-import {
-  Box,
-  TextField,
-  Button,
-  Typography,
-  Container,
-  Snackbar,
-  Alert,
-} from "@mui/material";
+import { useState, useRef } from "react";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
+
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {

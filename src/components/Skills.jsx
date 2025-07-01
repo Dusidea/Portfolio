@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import {
-  Tabs,
-  Tab,
-  Box,
-  Typography,
-  LinearProgress,
-  useTheme,
-  Stack,
-} from "@mui/material";
+import { useState } from "react";
+
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import LinearProgress from "@mui/material/LinearProgress";
+import { useTheme } from "@mui/material/styles";
+
+import Stack from "@mui/material/Stack";
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -17,6 +18,7 @@ import {
   FaDatabase,
   FaSymfony,
 } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 
 const categories = {

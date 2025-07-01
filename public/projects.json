@@ -6,7 +6,7 @@
     "description": "Interface responsive en HTML et CSS",
     "url": "https://dusidea.github.io/OC_P3_Booki/",
     "github": "https://github.com/Dusidea/OC_P3_Booki.git",
-    "preview": "assets/booki_preview.png"
+    "preview": "assets/booki_preview.webp"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "Intégration d'une maquette mobile-first avec des animations CSS",
     "url": "https://dusidea.github.io/dusidea_oc_p4.github.io/",
     "github": "https://github.com/Dusidea/dusidea_oc_p4.github.io.git",
-    "preview": "assets/ohmyfood_preview.png"
+    "preview": "assets/ohmyfood_preview.webp"
   },
   {
     "id": 3,
@@ -24,6 +24,6 @@
     "description": "Initiation à JavaScript avec carrousel",
     "url": "https://dusidea.github.io/OCP5/",
     "github": "https://github.com/Dusidea/OCP5.git",
-    "preview": "assets/printit_preview.png"
+    "preview": "assets/printit_preview.webp"
   }
 ]

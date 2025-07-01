@@ -1,8 +1,6 @@
-import { Box, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
@@ -22,9 +20,10 @@ export default function Project({ project }) {
           component="img"
           image={import.meta.env.BASE_URL + project.preview}
           alt="project preview"
+          loading="lazy"
           sx={{
             width: "100%",
-            height: { xs: 140, sm: 180, md: 220 }, // image responsive
+            height: { xs: 140, sm: 180, md: 220 },
             objectFit: "cover",
           }}
         />

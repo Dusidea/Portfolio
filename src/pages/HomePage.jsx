@@ -1,4 +1,5 @@
-import { Container, Stack } from "@mui/material";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
 import ProjectsList from "../components/ProjectsList";
 import Bio from "../components/Bio";
 import HeroHeader from "../components/Header";
