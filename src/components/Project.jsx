@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,113 +8,80 @@ import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import MyButton from "./MyButton";
 
-export default function Project({ projects }) {
+export default function Project({ project }) {
   return (
-    <>
-      {projects.map((project) => (
-        <Card
-          key={project.id}
+    <Card
+      sx={{
+        bgcolor: "primary.light",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          image={import.meta.env.BASE_URL + project.preview}
+          alt="project preview"
           sx={{
-            bgcolor: "primary.light",
-            // "&:hover": {
-            //   bgcolor: "secondary.main",
-            // },
-            minWidth: "40%",
+            width: "100%",
+            height: { xs: 140, sm: 180, md: 220 }, // image responsive
+            objectFit: "cover",
+          }}
+        />
+        <CardContent>
+          <Typography
+            gutterBottom
+            variant="h6"
+            component="div"
+            sx={{
+              fontSize: { xs: "1rem", sm: "1.2rem", md: "1.4rem" },
+            }}
+          >
+            {project.title}
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{
+              color: "text.secondary",
+              fontSize: { xs: "0.85rem", sm: "0.95rem" },
+            }}
+          >
+            {project.description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          gap: 1,
+          alignItems: "stretch",
+          p: 2,
+        }}
+      >
+        <MyButton
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            fontSize: { xs: "0.75rem", sm: "0.85rem" },
+            width: "100%",
           }}
         >
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              // height="140"
-              image={import.meta.env.BASE_URL + project.preview}
-              alt="project preview"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {project.title}
-              </Typography>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                {project.description}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <MyButton
-              // variant="outlined"
-              // size="large"
-              // color="text.primary"
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              // sx={{
-              //   "&:hover": {
-              //     bgcolor: "secondary.main",
-              //   },
-              // }}
-            >
-              Voir le projet
-            </MyButton>
-            <MyButton
-              // size="large"
-              // color="text.primary"
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              // sx={{
-              //   "&:hover": {
-              //     bgcolor: "secondary.main",
-              //   },
-              // }}
-            >
-              Code source
-            </MyButton>
-            {/* <Button
-              variant="outlined"
-              size="large"
-              color="text.primary"
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                "&:hover": {
-                  bgcolor: "secondary.main",
-                },
-              }}
-            >
-              Voir le projet
-            </Button>
-            <Button
-              size="large"
-              color="text.primary"
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                "&:hover": {
-                  bgcolor: "secondary.main",
-                },
-              }}
-            >
-              Code source
-            </Button> */}
-          </CardActions>
-        </Card>
-      ))}
-    </>
-  );
-}
-
-{
-  /* <Box
-          key={project.id}
+          Voir le projet
+        </MyButton>
+        <MyButton
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
-            boxShadow: 1,
-            borderRadius: "25px",
-            padding: "25px",
-            bgcolor: "primary.main",
-            "&:hover": {
-              bgcolor: "secondary.main",
-            },
+            fontSize: { xs: "0.75rem", sm: "0.85rem" },
+            width: "100%",
           }}
-        ></Box> */
+        >
+          Code source
+        </MyButton>
+      </CardActions>
+    </Card>
+  );
 }

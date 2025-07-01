@@ -55,3 +55,25 @@ Ne précise la couleur que si tu veux changer celle par défaut du thème.
 Le style dans le JS avec sx est totalement recommandé avec MUI.
 
 Tu peux centraliser des styles avec styled() si tu veux les réutiliser souvent.
+
+## Responsive
+
+https://mui.com/material-ui/guides/responsive-ui/
+
+### Breakpoints
+
+Default breakpoints
+
+Each breakpoint (a key) matches with a fixed screen width (a value):
+
+- xs, extra-small: 0px
+- sm, small: 600px
+- md, medium: 900px
+- lg, large: 1200px
+- xl, extra-large: 1536px
+
+https://mui.com/material-ui/customization/breakpoints/
+
+### useMediaQuery
+
+https://mui.com/material-ui/react-use-media-query/

@@ -1,16 +1,17 @@
-import { Box, Typography, Container, Button } from "@mui/material";
+import { Box, Typography, Container, IconButton, Link } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 
 export default function HeroHeader() {
   return (
     <Box
       component="header"
       sx={{
-        // background:
-        //   "linear-gradient(127deg,rgba(2, 132, 118, 1) 0%, rgba(0, 34, 28, 1) 100%)",
         bgcolor: "primary.dark",
         backgroundPosition: "center",
         color: "white",
-        py: 8,
+        py: { xs: 6, md: 8 },
         textAlign: "center",
         borderRadius: "25px",
       }}
@@ -22,9 +23,68 @@ export default function HeroHeader() {
         <Typography component="p" variant="h5" gutterBottom>
           Développeuse web
         </Typography>
-        <Button variant="contained" color="secondary" size="large">
-          Voir plus
-        </Button>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: 2,
+            mt: 3,
+          }}
+        >
+          <Link
+            href="https://github.com/Dusidea"
+            target="_blank"
+            rel="noopener"
+            color="inherit"
+            title="Voir mon GitHub"
+          >
+            <IconButton
+              color="inherit"
+              sx={{
+                transition: "color 0.3s",
+                "&:hover": { color: "secondary.main" },
+              }}
+            >
+              <GitHubIcon fontSize="large" />
+            </IconButton>
+          </Link>
+
+          <Link
+            href="www.linkedin.com/in/laurieplanes"
+            target="_blank"
+            rel="noopener"
+            color="inherit"
+            title="Voir mon LinkedIn"
+          >
+            <IconButton
+              color="inherit"
+              sx={{
+                transition: "color 0.3s",
+                "&:hover": { color: "secondary.main" },
+              }}
+            >
+              <LinkedInIcon fontSize="large" />
+            </IconButton>
+          </Link>
+
+          <Link
+            href="mailto:laurie.planes@gmail.com"
+            color="inherit"
+            title="Me contacter par email"
+          >
+            <IconButton
+              color="inherit"
+              sx={{
+                transition: "color 0.3s",
+                "&:hover": { color: "secondary.main" },
+              }}
+            >
+              <EmailIcon fontSize="large" />
+            </IconButton>
+          </Link>
+        </Box>
       </Container>
     </Box>
   );
