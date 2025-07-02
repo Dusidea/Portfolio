@@ -45,6 +45,7 @@ export default function HeroHeader() {
             title="Voir mon GitHub"
           >
             <IconButton
+              aria-label="Voir mon profil Github"
               color="inherit"
               sx={{
                 transition: "color 0.3s",
@@ -63,6 +64,7 @@ export default function HeroHeader() {
             title="Voir mon LinkedIn"
           >
             <IconButton
+              aria-label="Voir mon LinkedIn"
               color="inherit"
               sx={{
                 transition: "color 0.3s",
@@ -79,6 +81,7 @@ export default function HeroHeader() {
             title="Me contacter par email"
           >
             <IconButton
+              aria-label="Me contacter par email"
               color="inherit"
               sx={{
                 transition: "color 0.3s",

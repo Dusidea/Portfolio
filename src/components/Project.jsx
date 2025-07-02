@@ -10,7 +10,6 @@ export default function Project({ project }) {
   return (
     <Card
       sx={{
-        bgcolor: "primary.light",
         display: "flex",
         flexDirection: "column",
       }}
@@ -19,7 +18,7 @@ export default function Project({ project }) {
         <CardMedia
           component="img"
           image={import.meta.env.BASE_URL + project.preview}
-          alt="project preview"
+          alt={project.title + " preview"}
           loading="lazy"
           sx={{
             width: "100%",
@@ -41,7 +40,6 @@ export default function Project({ project }) {
           <Typography
             variant="body2"
             sx={{
-              color: "text.secondary",
               fontSize: { xs: "0.85rem", sm: "0.95rem" },
             }}
           >

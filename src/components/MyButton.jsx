@@ -9,17 +9,18 @@ const MyButton = ({ href, children }) => (
     sx={{
       textTransform: "none",
       fontWeight: "bold",
+      color: "secondary.contrastText",
       bgcolor: "secondary.main",
       "&:hover": {
-        bgcolor: "primary.dark",
+        bgcolor: "primary.main",
+        color: "primary.constrastText",
       },
       mx: { xs: 0, sm: "10px" },
-      px: { xs: 1.5, sm: 2.5 }, // padding horizontal responsive
+      px: { xs: 2, sm: 3 }, // padding horizontal responsive
       py: { xs: 0.8, sm: 1.2 }, // padding vertical responsive
       fontSize: { xs: "0.75rem", sm: "0.875rem", md: "1rem" }, // taille de texte responsive
       borderRadius: "12px",
       whiteSpace: "nowrap",
-      color: "text.secondary",
     }}
   >
     {children}

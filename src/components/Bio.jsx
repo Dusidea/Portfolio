@@ -7,7 +7,8 @@ export default function Bio() {
       component="section"
       sx={{
         padding: "25px",
-        bgcolor: "primary.light",
+        bgcolor: "secondary.main",
+        color: "secondary.contrastText",
         borderRadius: "15px",
       }}
     >

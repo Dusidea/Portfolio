@@ -37,7 +37,7 @@ export default function ContactForm() {
   return (
     <Box sx={{ py: 5, mt: 8 }}>
       <Container maxWidth="sm">
-        <Typography variant="h5" align="center" gutterBottom>
+        <Typography variant="h3" align="center" gutterBottom>
           Contactez-moi
         </Typography>
         <form ref={formRef} onSubmit={sendEmail}>
@@ -66,7 +66,13 @@ export default function ContactForm() {
             required
           />
           <Box textAlign="center" mt={2}>
-            <Button variant="contained" color="primary" type="submit">
+            <Button
+              variant="contained"
+              // color="primary"
+              type="submit"
+              aria-label="envoyer"
+              sx={{ color: "secondary.contrastText" }}
+            >
               Envoyer
             </Button>
           </Box>

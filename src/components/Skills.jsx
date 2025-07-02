@@ -43,98 +43,98 @@ export default function Skills() {
   const categoriesKeys = Object.keys(categories);
 
   return (
-    <Box sx={{ width: "100%", mt: 4 }}>
-      <Tabs
-        value={tab}
-        onChange={(e, newValue) => setTab(newValue)}
-        variant="scrollable"
-        scrollButtons="auto"
+    <Box
+      sx={{
+        width: "100%",
+        mt: 4,
+      }}
+    >
+      <Typography variant="h2" sx={{ textAlign: "center", my: 4 }}>
+        Mes compétences
+      </Typography>
+      <Box
+        sx={{
+          width: "100%",
+          mt: 4,
+          backgroundColor: "rgba(255,255,255,0.05)",
+          borderRadius: 2,
+          p: 1,
+        }}
       >
-        {categoriesKeys.map((key, i) => (
-          <Tab key={i} label={key} />
-        ))}
-      </Tabs>
-
-      {categoriesKeys.map((key, index) => (
-        <Box
-          role="tabpanel"
-          hidden={tab !== index}
-          key={index}
-          sx={{ mt: 4, px: 2 }}
+        <Tabs
+          value={tab}
+          onChange={(e, newValue) => setTab(newValue)}
+          variant="scrollable"
+          scrollButtons="auto"
+          indicatorColor="secondary"
+          sx={{
+            ".MuiTab-root": {
+              color: "#FFD7CD",
+              "&.Mui-selected": {
+                color: "inherit",
+              },
+            },
+          }}
         >
-          {tab === index && (
-            <Stack spacing={3}>
-              {categories[key].map((skill, i) => (
-                <Box key={i}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      mb: 1,
-                      gap: 1,
-                    }}
-                  >
-                    {skill.icon}
-                    <Typography variant="body1" fontWeight="bold">
-                      {skill.name}
-                    </Typography>
-                    <Typography variant="body2" ml="auto">
-                      {skill.level}%
-                    </Typography>
-                  </Box>
+          {categoriesKeys.map((key, i) => (
+            <Tab key={i} label={key} />
+          ))}
+        </Tabs>
 
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.2 }}
-                  >
-                    <LinearProgress
-                      variant="determinate"
-                      value={100}
+        {categoriesKeys.map((key, index) => (
+          <Box
+            role="tabpanel"
+            hidden={tab !== index}
+            key={index}
+            sx={{ mt: 4, px: 2 }}
+          >
+            {tab === index && (
+              <Stack spacing={3}>
+                {categories[key].map((skill, i) => (
+                  <Box key={i}>
+                    <Box
                       sx={{
-                        height: 10,
-                        borderRadius: 5,
-                        backgroundColor: theme.palette.grey[300],
-                        "& .MuiLinearProgress-bar": {
-                          backgroundColor: theme.palette.primary.main,
-                        },
+                        display: "flex",
+                        alignItems: "center",
+                        mb: 1,
+                        gap: 1,
                       }}
-                    />
-                  </motion.div>
-                </Box>
-              ))}
-            </Stack>
-          )}
-        </Box>
-      ))}
+                    >
+                      {skill.icon}
+                      <Typography variant="body1" fontWeight="bold">
+                        {skill.name}
+                      </Typography>
+                      <Typography variant="body2" ml="auto">
+                        {skill.level}%
+                      </Typography>
+                    </Box>
+
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${skill.level}%` }}
+                      transition={{ duration: 1.2 }}
+                    >
+                      <LinearProgress
+                        aria-label={skill.name + " " + skill.level}
+                        variant="determinate"
+                        value={100}
+                        sx={{
+                          height: 10,
+                          borderRadius: 5,
+                          backgroundColor: theme.palette.grey[300],
+                          "& .MuiLinearProgress-bar": {
+                            backgroundColor: theme.palette.primary.main,
+                          },
+                        }}
+                      />
+                    </motion.div>
+                  </Box>
+                ))}
+              </Stack>
+            )}
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 }
-
-// export default function Skills() {
-//   return (
-//     <List
-//       sx={{ width: "30%" }}
-//       subheader={
-//         <ListSubheader sx={{ bgcolor: "primary.dark" }}>Outils</ListSubheader>
-//       }
-//     >
-//       <ListItem alignItems="flex-start">
-//         <ListItemAvatar>
-//           <Avatar
-//             alt="Icone VsCode"
-//             src={import.meta.env.BASE_URL + "/assets/vscode.svg"}
-//           />
-//         </ListItemAvatar>
-//         <ListItemText>VsCode</ListItemText>
-//       </ListItem>
-//       <Divider variant="inset" component="li" />
-//       <ListItem alignItems="flex-start">
-//         <ListItemAvatar>
-//           <Avatar alt="Icone VsCode" src="" />
-//         </ListItemAvatar>
-//         <ListItemText>Git</ListItemText>
-//       </ListItem>
-//     </List>
-//   );
-// }

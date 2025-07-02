@@ -1,26 +1,29 @@
 import { createTheme } from "@mui/material/styles";
-//   main: "#11B6A5", //teal blue light
-//   main: "#C58130", //orange
-//   main: "#724E36", //brown
-//   main: "#A25F81", //pink
-//   main: "#211820", //purple
+
 const theme = createTheme({
   palette: {
+    mode: "dark",
     primary: {
-      main: "#11B6A5", //teal blue light
+      main: "#607D8B", // bleu-gris pro
+      dark: "#455A64", // version foncée pour hover
+      light: "#CFD8DC", // très clair pour badges ou borders
+      contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#E88E2D", //orange
+      main: "#90A4AE", // gris bleuté clair
+      contrastText: "#000000",
     },
-
     background: {
-      default: "primary.main",
+      default: "#121212", // fond global
+      paper: "#1E1E1E", // cartes, modales
     },
     text: {
-      primary: "#FFFFF0", //black
-      secondary: "#FFFFFF", //white
+      primary: "#FFFFFF",
+      secondary: "#CCCCCC",
     },
+    divider: "#333333",
   },
+
   typography: {
     fontFamily: `'Lato', sans-serif`,
     h1: {
@@ -34,7 +37,7 @@ const theme = createTheme({
     MuiDrawer: {
       styleOverrides: {
         paper: ({ theme }) => ({
-          backgroundColor: theme.palette.primary.dark,
+          backgroundColor: theme.palette.primary.main,
           color: theme.palette.text.primary,
         }),
       },
