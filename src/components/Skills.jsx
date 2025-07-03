@@ -13,27 +13,40 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaJs,
-  FaPhp,
-  FaWordpress,
+  FaReact,
   FaDatabase,
   FaSymfony,
+  FaJira,
+  FaTrello,
+  FaNodeJs,
+  FaGithub,
+  FaGitlab,
 } from "react-icons/fa";
+import { FaRightLeft } from "react-icons/fa6";
+import { RiNotionFill } from "react-icons/ri";
 
 import { motion } from "framer-motion";
 
 const categories = {
   Frontend: [
-    { name: "HTML5", icon: <FaHtml5 color="#e44d26" />, level: 94 },
-    { name: "CSS3", icon: <FaCss3Alt color="#1572B6" />, level: 94 },
-    { name: "JavaScript", icon: <FaJs color="#f0db4f" />, level: 70 },
+    { name: "HTML5", icon: <FaHtml5 />, level: 94 },
+    { name: "CSS3", icon: <FaCss3Alt />, level: 90 },
+    { name: "JavaScript", icon: <FaJs />, level: 70 },
+    { name: "React", icon: <FaReact />, level: 85 },
   ],
   Backend: [
-    { name: "PHP", icon: <FaPhp color="#777bb4" />, level: 90 },
-    { name: "MySQL", icon: <FaDatabase color="#00758F" />, level: 75 },
-    { name: "Symfony", icon: <FaSymfony color="black" />, level: 70 },
+    { name: "Node.js", icon: <FaNodeJs />, level: 60 },
+    { name: "MySQL", icon: <FaDatabase />, level: 75 },
+    { name: "Symfony", icon: <FaSymfony />, level: 40 },
+    { name: "API REST", icon: <FaRightLeft />, level: 60 },
   ],
-  CMS: [
-    { name: "WordPress", icon: <FaWordpress color="#21759b" />, level: 80 },
+
+  Organization: [
+    { name: "Notion", icon: <RiNotionFill />, level: 90 },
+    { name: "Jira", icon: <FaJira />, level: 95 },
+    { name: "Trello", icon: <FaTrello />, level: 95 },
+    { name: "Github", icon: <FaGithub />, level: 90 },
+    { name: "Gitlab", icon: <FaGitlab />, level: 70 },
   ],
 };
 

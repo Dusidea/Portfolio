@@ -63,7 +63,7 @@ export default function HeroHeader() {
           </Link>
 
           <Link
-            href="www.linkedin.com/in/laurieplanes"
+            href="https://www.linkedin.com/in/laurieplanes/"
             target="_blank"
             rel="noopener"
             color="inherit"
