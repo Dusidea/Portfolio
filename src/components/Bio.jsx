@@ -6,6 +6,7 @@ export default function Bio() {
       id="about"
       component="section"
       sx={{
+        scrollMarginTop: "64px",
         padding: "25px",
         bgcolor: "secondary.main",
         color: "secondary.contrastText",

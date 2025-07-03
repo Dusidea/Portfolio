@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
-import MyButton from "./MyButton";
+import CardButton from "./CardButton";
 
 export default function Project({ project }) {
   return (
@@ -12,6 +12,13 @@ export default function Project({ project }) {
       sx={{
         display: "flex",
         flexDirection: "column",
+        boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+        transition: "box-shadow 0.3s ease, transform 0.3s ease",
+        cursor: "pointer",
+        "&:hover": {
+          boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+          transform: "translateY(-4px)",
+        },
       }}
     >
       <CardActionArea>
@@ -56,7 +63,7 @@ export default function Project({ project }) {
           p: 2,
         }}
       >
-        <MyButton
+        <CardButton
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -65,9 +72,10 @@ export default function Project({ project }) {
             width: "100%",
           }}
         >
+          {" "}
           Voir le projet
-        </MyButton>
-        <MyButton
+        </CardButton>
+        <CardButton
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
@@ -76,8 +84,9 @@ export default function Project({ project }) {
             width: "100%",
           }}
         >
+          {" "}
           Code source
-        </MyButton>
+        </CardButton>
       </CardActions>
     </Card>
   );

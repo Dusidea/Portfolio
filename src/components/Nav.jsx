@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import MyButton from "./MyButton";
+import NavButton from "./NavButton";
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -22,6 +22,8 @@ export default function Nav() {
   const navItems = [
     { label: "À propos", href: "#about" },
     { label: "Mes réalisations", href: "#projects" },
+    { label: "Mes compétences", href: "#skills" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const drawer = (
@@ -53,9 +55,9 @@ export default function Nav() {
           {/* Desktop buttons */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <MyButton key={item.href} href={item.href}>
+              <NavButton key={item.href} href={item.href}>
                 {item.label}
-              </MyButton>
+              </NavButton>
             ))}
           </Box>
 
@@ -71,7 +73,7 @@ export default function Nav() {
         </Toolbar>
       </AppBar>
 
-      {/* Drawer pour mobile */}
+      {/* Drawer for mobile */}
       <Drawer
         anchor="right"
         open={mobileOpen}

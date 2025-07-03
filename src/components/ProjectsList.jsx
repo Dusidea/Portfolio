@@ -44,7 +44,7 @@ export default function ProjectsList() {
   }
 
   return (
-    <Box id="projects">
+    <Box id="projects" sx={{ scrollMarginTop: "64px" }}>
       <Typography variant="h2" sx={{ textAlign: "center", my: 4 }}>
         Mes réalisations
       </Typography>

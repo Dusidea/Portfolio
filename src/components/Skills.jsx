@@ -44,9 +44,11 @@ export default function Skills() {
 
   return (
     <Box
+      id="skills"
       sx={{
         width: "100%",
         mt: 4,
+        scrollMarginTop: "64px",
       }}
     >
       <Typography variant="h2" sx={{ textAlign: "center", my: 4 }}>

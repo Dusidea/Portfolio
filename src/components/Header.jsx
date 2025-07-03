@@ -18,12 +18,14 @@ export default function HeroHeader() {
         py: { xs: 6, md: 8 },
         textAlign: "center",
         borderRadius: "25px",
+        overflow: "hidden",
       }}
     >
       <Container component="section" maxWidth="md">
         <Typography component="h1" variant="h2" gutterBottom>
           Laurie Planès
         </Typography>
+
         <Typography component="p" variant="h5" gutterBottom>
           Développeuse web
         </Typography>
@@ -49,7 +51,11 @@ export default function HeroHeader() {
               color="inherit"
               sx={{
                 transition: "color 0.3s",
-                "&:hover": { color: "secondary.main" },
+                "&:hover": {
+                  color: "secondary.main",
+                  boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+                  transform: "translateY(-4px)",
+                },
               }}
             >
               <GitHubIcon fontSize="large" />
@@ -68,7 +74,11 @@ export default function HeroHeader() {
               color="inherit"
               sx={{
                 transition: "color 0.3s",
-                "&:hover": { color: "secondary.main" },
+                "&:hover": {
+                  color: "secondary.main",
+                  boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+                  transform: "translateY(-4px)",
+                },
               }}
             >
               <LinkedInIcon fontSize="large" />
@@ -85,7 +95,11 @@ export default function HeroHeader() {
               color="inherit"
               sx={{
                 transition: "color 0.3s",
-                "&:hover": { color: "secondary.main" },
+                "&:hover": {
+                  color: "secondary.main",
+                  boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+                  transform: "translateY(-4px)",
+                },
               }}
             >
               <EmailIcon fontSize="large" />
