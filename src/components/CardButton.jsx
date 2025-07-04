@@ -1,16 +1,14 @@
 import Button from "@mui/material/Button";
 
-const CardButton = ({ href, children }) => (
+const CardButton = ({ children, ...props }) => (
   <Button
     variant="contained"
+    color="secondary"
     component="a"
-    href={href}
     size="large"
     sx={{
       textTransform: "none",
       fontWeight: "bold",
-      color: "secondary.contrastText",
-      bgcolor: "secondary.main",
       "&:hover": {
         boxShadow: "0 4px 10px rgba(255, 215, 205, 0.7)",
         transform: "translateY(-2px)",
@@ -22,6 +20,7 @@ const CardButton = ({ href, children }) => (
       borderRadius: "12px",
       whiteSpace: "nowrap",
     }}
+    {...props}
   >
     {children}
   </Button>

@@ -84,7 +84,7 @@ export default function Skills() {
           indicatorColor="secondary"
           sx={{
             ".MuiTab-root": {
-              color: "#FFD7CD",
+              color: "third.main",
               "&.Mui-selected": {
                 color: "inherit",
               },

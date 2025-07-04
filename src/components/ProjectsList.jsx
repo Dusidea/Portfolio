@@ -13,16 +13,16 @@ export default function ProjectsList() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down("sm")); // <600px
-  const isSm = useMediaQuery(theme.breakpoints.between("sm", "md")); // 600-900
-  const isMdUp = useMediaQuery(theme.breakpoints.up("md")); // >900px
+  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSm = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
   let columns = 1;
   if (isSm) columns = 2;
   else if (isMdUp) columns = 3;
 
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "/projects.json")
+    fetch(import.meta.env.BASE_URL + "/data/projects.json")
       .then((res) => {
         if (!res.ok) throw new Error("Erreur lors du chargement");
         return res.json();

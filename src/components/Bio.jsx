@@ -1,7 +1,9 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 
 export default function Bio() {
+  const theme = useTheme();
   return (
     <Box id="about" component="section">
       <Typography variant="h2" sx={{ textAlign: "center", my: 4 }}>
@@ -11,7 +13,12 @@ export default function Bio() {
         sx={{
           scrollMarginTop: "64px",
           padding: "25px",
-          bgcolor: "secondary.main",
+          background: `linear-gradient(
+  135deg,
+  ${theme.palette.third.light} 30%,
+  ${theme.palette.third.main} 60%,
+  ${theme.palette.third.dark} 90%
+)`,
           color: "secondary.contrastText",
           borderRadius: "15px",
         }}

@@ -4,18 +4,23 @@ const theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#607D8B", // grey-blue
+      main: "#607D8B",
       dark: "#455A64",
       light: "#CFD8DC",
       contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#90A4AE", // light grey blue
+      main: "#90A4AE",
       contrastText: "#000000",
     },
+    third: {
+      light: "#FFE8DC",
+      main: "#FFD7CD",
+      dark: "#E6A68C",
+    },
     background: {
-      default: "#121212", // default background
-      paper: "#1E1E1E", // cards and modal background
+      default: "#121212",
+      paper: "#1E1E1E",
     },
     text: {
       primary: "#FFFFFF",

@@ -19,6 +19,7 @@ export default function Nav() {
     setMobileOpen(!mobileOpen);
   };
 
+  // Store list of navigation items here
   const navItems = [
     { label: "À propos", href: "#about" },
     { label: "Mes réalisations", href: "#projects" },

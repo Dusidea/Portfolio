@@ -68,11 +68,9 @@ export default function Project({ project }) {
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            fontSize: { xs: "0.75rem", sm: "0.85rem" },
             width: "100%",
           }}
         >
-          {" "}
           Voir le projet
         </CardButton>
         <CardButton
@@ -80,11 +78,9 @@ export default function Project({ project }) {
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            fontSize: { xs: "0.75rem", sm: "0.85rem" },
             width: "100%",
           }}
         >
-          {" "}
           Code source
         </CardButton>
       </CardActions>

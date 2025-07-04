@@ -18,10 +18,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_e5cav2c", // service ID
-        "template_et3ftss", // templateID
+        "service_e5cav2c",
+        "template_et3ftss",
         formRef.current,
-        "P7Snp8NYOf8lIdfij" // public key
+        "P7Snp8NYOf8lIdfij"
       )
       .then(
         () => {
