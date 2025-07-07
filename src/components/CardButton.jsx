@@ -18,7 +18,11 @@ const CardButton = ({ children, ...props }) => (
       py: { xs: 0.8, sm: 1.2 },
       fontSize: { xs: "0.75rem", sm: "0.875rem", md: "1rem" },
       borderRadius: "12px",
-      whiteSpace: "nowrap",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      boxSizing: "border-box",
     }}
     {...props}
   >

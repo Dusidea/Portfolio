@@ -61,6 +61,11 @@ export default function Project({ project }) {
           gap: 1,
           alignItems: "stretch",
           p: 2,
+          width: "100%",
+          boxSizing: "border-box",
+          "& > :not(style) ~ :not(style)": {
+            ml: { xs: 0, sm: "8px" },
+          },
         }}
       >
         <CardButton
