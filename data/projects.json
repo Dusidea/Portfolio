@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "slug": "booki",
-    "title": "Hébergements de vacances",
-    "description": "Interface responsive en HTML et CSS",
-    "url": "https://dusidea.github.io/OC_P3_Booki/",
-    "github": "https://github.com/Dusidea/OC_P3_Booki.git",
-    "preview": "assets/booki_preview.webp"
+    "slug": "locations",
+    "title": "Site de locations de vacances",
+    "description": "Simulation d’un site de locations avec React et JSON.",
+    "url": "https://dusidea.fr/",
+    "github": "https://github.com/Dusidea/OC_P7_KASA.git",
+    "preview": "assets/Kasa_preview.png"
   },
   {
     "id": 2,
