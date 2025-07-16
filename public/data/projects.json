@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "slug": "booki",
-    "title": "Hébergements de vacances",
-    "description": "Interface responsive en HTML et CSS",
-    "url": "https://dusidea.github.io/OC_P3_Booki/",
-    "github": "https://github.com/Dusidea/OC_P3_Booki.git",
-    "preview": "assets/booki_preview.webp"
+    "slug": "locations",
+    "title": "Site de locations de vacances (simulation)",
+    "description": "Simulation d’un site de locations avec React et JSON.",
+    "url": "https://dusidea.github.io/OC_P7_KASA/",
+    "github": "https://github.com/Dusidea/OC_P7_KASA.git",
+    "preview": "assets/Kasa_preview.png"
   },
   {
     "id": 2,
     "slug": "ohmyfood",
-    "title": "Réservation de menus",
+    "title": "Plateforme de réservation de menus (simulation)",
     "description": "Intégration d'une maquette mobile-first avec des animations CSS",
     "url": "https://dusidea.github.io/dusidea_oc_p4.github.io/",
     "github": "https://github.com/Dusidea/dusidea_oc_p4.github.io.git",
@@ -20,10 +20,19 @@
   {
     "id": 3,
     "slug": "printit",
-    "title": "Site de commande d'impression avec carrousel",
+    "title": "Simulation de site de commande d'impression avec carrousel",
     "description": "Initiation à JavaScript avec carrousel",
     "url": "https://dusidea.github.io/OCP5/",
     "github": "https://github.com/Dusidea/OCP5.git",
     "preview": "assets/printit_preview.webp"
+  },
+  {
+    "id": 4,
+    "slug": "argentbank",
+    "title": "Application Bancaire (simulation)",
+    "description": "Frontend développé avec React, connecté à un backend existant. Appels API REST, gestion des états avec Redux, sécurisation des routes côté client.",
+    "url": "https://dusidea.github.io/OCP5/",
+    "github": "https://github.com/Dusidea/P10_FRONT.git",
+    "preview": "assets/ArgentBank_preview.png"
   }
 ]
