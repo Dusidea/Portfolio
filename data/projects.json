@@ -6,7 +6,7 @@
     "description": "Simulation d’un site de locations avec React et JSON.",
     "url": "https://dusidea.github.io/OC_P7_KASA/",
     "github": "https://github.com/Dusidea/OC_P7_KASA.git",
-    "preview": "assets/Kasa_preview.png"
+    "preview": "assets/Kasa_preview.webp"
   },
   {
     "id": 2,
@@ -33,6 +33,6 @@
     "description": "Frontend développé avec React, connecté à un backend existant. Appels API REST, gestion des états avec Redux, sécurisation des routes côté client.",
     "url": "https://dusidea.github.io/P10_FRONT/",
     "github": "https://github.com/Dusidea/P10_FRONT.git",
-    "preview": "assets/ArgentBank_preview.png"
+    "preview": "assets/ArgentBank_preview.webp"
   }
 ]
