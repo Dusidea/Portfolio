@@ -19,7 +19,7 @@ function HomePage() {
       <Stack spacing={4}>
         <Nav />
         <HeroHeader />
-        <Bio />
+        {/* <Bio /> */}
         <ProjectsList />
         <Skills />
       </Stack>

@@ -6,6 +6,8 @@ import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import { motion } from "framer-motion";
+import TypedIntro from "./TypedIntro"; // chemin à adapter selon ton arborescence
 
 export default function HeroHeader() {
   return (
@@ -13,99 +15,120 @@ export default function HeroHeader() {
       component="header"
       sx={{
         bgcolor: "primary.dark",
-        backgroundPosition: "center",
         color: "white",
         py: { xs: 6, md: 8 },
         textAlign: "center",
         borderRadius: "25px",
         overflow: "hidden",
+        px: 2,
       }}
     >
       <Container component="section" maxWidth="md">
-        <Typography component="h1" variant="h2" gutterBottom>
-          Laurie Planès
-        </Typography>
-
-        <Typography component="p" variant="h5" gutterBottom>
-          Développeuse web
-        </Typography>
-
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: 2,
-            mt: 3,
-          }}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <Link
-            href="https://github.com/Dusidea"
-            target="_blank"
-            rel="noopener"
-            color="inherit"
-            title="Voir mon GitHub"
+          <Typography
+            component="h1"
+            variant="h2"
+            gutterBottom
+            sx={{ fontWeight: 700 }}
           >
-            <IconButton
-              aria-label="Voir mon profil Github"
-              color="inherit"
-              sx={{
-                transition: "color 0.3s",
-                "&:hover": {
-                  color: "secondary.main",
-                  boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
-                  transform: "translateY(-4px)",
-                },
-              }}
-            >
-              <GitHubIcon fontSize="large" />
-            </IconButton>
-          </Link>
+            Laurie Planès
+          </Typography>
+        </motion.div>
 
-          <Link
-            href="https://www.linkedin.com/in/laurieplanes/"
-            target="_blank"
-            rel="noopener"
-            color="inherit"
-            title="Voir mon LinkedIn"
-          >
-            <IconButton
-              aria-label="Voir mon LinkedIn"
-              color="inherit"
-              sx={{
-                transition: "color 0.3s",
-                "&:hover": {
-                  color: "secondary.main",
-                  boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
-                  transform: "translateY(-4px)",
-                },
-              }}
-            >
-              <LinkedInIcon fontSize="large" />
-            </IconButton>
-          </Link>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 1 }}
+        >
+          <TypedIntro />
+        </motion.div>
 
-          <Link
-            href="mailto:laurie.planes@gmail.com"
-            color="inherit"
-            title="Me contacter par email"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1, duration: 0.6 }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: 2,
+              mt: 4,
+            }}
           >
-            <IconButton
-              aria-label="Me contacter par email"
+            <Link
+              href="https://github.com/Dusidea"
+              target="_blank"
+              rel="noopener"
               color="inherit"
-              sx={{
-                transition: "color 0.3s",
-                "&:hover": {
-                  color: "secondary.main",
-                  boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
-                  transform: "translateY(-4px)",
-                },
-              }}
+              title="Voir mon GitHub"
             >
-              <EmailIcon fontSize="large" />
-            </IconButton>
-          </Link>
-        </Box>
+              <IconButton
+                aria-label="Voir mon profil Github"
+                color="inherit"
+                sx={{
+                  transition: "all 0.3s",
+                  "&:hover": {
+                    color: "secondary.main",
+                    boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+                    transform: "translateY(-4px) scale(1.1)",
+                  },
+                }}
+              >
+                <GitHubIcon fontSize="large" />
+              </IconButton>
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/in/laurieplanes/"
+              target="_blank"
+              rel="noopener"
+              color="inherit"
+              title="Voir mon LinkedIn"
+            >
+              <IconButton
+                aria-label="Voir mon LinkedIn"
+                color="inherit"
+                sx={{
+                  transition: "all 0.3s",
+                  "&:hover": {
+                    color: "secondary.main",
+                    boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+                    transform: "translateY(-4px) scale(1.1)",
+                  },
+                }}
+              >
+                <LinkedInIcon fontSize="large" />
+              </IconButton>
+            </Link>
+
+            <Link
+              href="mailto:laurie.planes@gmail.com"
+              color="inherit"
+              title="Me contacter par email"
+            >
+              <IconButton
+                aria-label="Me contacter par email"
+                color="inherit"
+                sx={{
+                  transition: "all 0.3s",
+                  "&:hover": {
+                    color: "secondary.main",
+                    boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+                    transform: "translateY(-4px) scale(1.1)",
+                  },
+                }}
+              >
+                <EmailIcon fontSize="large" />
+              </IconButton>
+            </Link>
+          </Box>
+        </motion.div>
       </Container>
     </Box>
   );
