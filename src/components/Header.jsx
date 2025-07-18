@@ -6,8 +6,9 @@ import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { motion } from "framer-motion";
-import TypedIntro from "./TypedIntro"; // chemin à adapter selon ton arborescence
+import TypedIntro from "./TypedIntro";
 
 export default function HeroHeader() {
   return (
@@ -125,6 +126,28 @@ export default function HeroHeader() {
                 }}
               >
                 <EmailIcon fontSize="large" />
+              </IconButton>
+            </Link>
+            <Link
+              href={`${import.meta.env.BASE_URL}/assets/Laurie_PLANES_CV.pdf`}
+              target="_blank"
+              rel="noopener"
+              color="inherit"
+              title="Télécharger mon CV"
+            >
+              <IconButton
+                aria-label="Télécharger mon CV"
+                color="inherit"
+                sx={{
+                  transition: "all 0.3s",
+                  "&:hover": {
+                    color: "secondary.main",
+                    boxShadow: "0 8px 20px rgba(255, 215, 205, 0.7)",
+                    transform: "translateY(-4px) scale(1.1)",
+                  },
+                }}
+              >
+                <FileDownloadIcon fontSize="large" />
               </IconButton>
             </Link>
           </Box>

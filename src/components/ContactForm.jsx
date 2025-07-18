@@ -38,7 +38,7 @@ export default function ContactForm() {
     <Box id="contact" sx={{ py: 5, mt: 8, scrollMarginTop: "64px" }}>
       <Container maxWidth="sm">
         <Typography variant="h3" align="center" gutterBottom>
-          Contactez-moi
+          Me contacter
         </Typography>
         <form ref={formRef} onSubmit={sendEmail}>
           <TextField

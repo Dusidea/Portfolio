@@ -10,7 +10,7 @@ export default function TypedIntro() {
     typedInstance.current = new Typed(el.current, {
       strings: [
         "Développeuse web.",
-        "10 ans d’expérience en relation client dans le SaaS",
+        "10 ans d’expérience en relation client.",
         "Toujours curieuse d'apprendre.",
       ],
       typeSpeed: 50,
