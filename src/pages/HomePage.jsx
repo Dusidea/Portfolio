@@ -1,7 +1,6 @@
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import ProjectsList from "../components/ProjectsList";
-import Bio from "../components/Bio";
 import HeroHeader from "../components/Header";
 import Nav from "../components/Nav";
 import Skills from "../components/Skills";
@@ -19,7 +18,7 @@ function HomePage() {
       <Stack spacing={4}>
         <Nav />
         <HeroHeader />
-        {/* <Bio /> */}
+
         <ProjectsList />
         <Skills />
       </Stack>
