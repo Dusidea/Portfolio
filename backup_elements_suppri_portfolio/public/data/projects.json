@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "slug": "locations",
+    "title": "Site de locations de vacances",
+    "description": "Simulation d’un site de locations avec React et JSON.",
+    "url": "https://dusidea.github.io/OC_P7_KASA/",
+    "github": "https://github.com/Dusidea/OC_P7_KASA.git",
+    "preview": "assets/Kasa_preview.webp"
+  },
+  {
+    "id": 2,
+    "slug": "ohmyfood",
+    "title": "Plateforme de réservation de menus",
+    "description": "Intégration d'une maquette mobile-first avec des animations CSS",
+    "url": "https://dusidea.github.io/dusidea_oc_p4.github.io/",
+    "github": "https://github.com/Dusidea/dusidea_oc_p4.github.io.git",
+    "preview": "assets/ohmyfood_preview.webp"
+  },
+  {
+    "id": 3,
+    "slug": "printit",
+    "title": "Site de commande d'impression avec carrousel",
+    "description": "Initiation à JavaScript avec carrousel",
+    "url": "https://dusidea.github.io/OCP5/",
+    "github": "https://github.com/Dusidea/OCP5.git",
+    "preview": "assets/printit_preview.webp"
+  },
+  {
+    "id": 4,
+    "slug": "argentbank",
+    "title": "Application Bancaire",
+    "description": "Frontend développé avec React, connecté à un backend existant. Appels API REST, gestion des états avec Redux, sécurisation des routes côté client.",
+    "url": "https://dusidea.github.io/P10_FRONT/",
+    "github": "https://github.com/Dusidea/P10_FRONT.git",
+    "preview": "assets/ArgentBank_preview.webp"
+  }
+]

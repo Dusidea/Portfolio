@@ -5,6 +5,8 @@ import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import CardButton from "./CardButton";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../styles/theme";
 
 export default function Project({ project }) {
   return (
@@ -21,7 +23,12 @@ export default function Project({ project }) {
         },
       }}
     >
-      <CardActionArea>
+      <CardActionArea
+        component="a"
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <CardMedia
           component="img"
           image={import.meta.env.BASE_URL + project.preview}
@@ -40,6 +47,7 @@ export default function Project({ project }) {
             component="div"
             sx={{
               fontSize: { xs: "1rem", sm: "1.2rem", md: "1.4rem" },
+              color: theme.palette.third.main,
             }}
           >
             {project.title}

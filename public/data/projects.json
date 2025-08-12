@@ -2,7 +2,7 @@
   {
     "id": 1,
     "slug": "locations",
-    "title": "KASA - Site de locations de vacances",
+    "title": "KASA",
     "description": "Simulation d’un site de locations avec React et JSON.",
     "url": "https://dusidea.github.io/OC_P7_KASA/",
     "github": "https://github.com/Dusidea/OC_P7_KASA.git",
@@ -11,8 +11,8 @@
   {
     "id": 2,
     "slug": "ohmyfood",
-    "title": "Ohmyfood - Plateforme de réservation de menus",
-    "description": "Intégration d'une maquette mobile-first avec des animations CSS",
+    "title": "Ohmyfood",
+    "description": "Intégration d'une maquette mobile-first avec des animations CSS dans une plateforme de réservation de menus",
     "url": "https://dusidea.github.io/dusidea_oc_p4.github.io/",
     "github": "https://github.com/Dusidea/dusidea_oc_p4.github.io.git",
     "preview": "assets/ohmyfood_preview.webp"
@@ -20,8 +20,8 @@
   {
     "id": 3,
     "slug": "printit",
-    "title": "Print-it - Site de commande d'impression avec carrousel",
-    "description": "Initiation à JavaScript avec carrousel",
+    "title": "Print-it",
+    "description": "Initiation à JavaScript avec carrousel pour un site de commande d'impression avec carrousel",
     "url": "https://dusidea.github.io/OCP5/",
     "github": "https://github.com/Dusidea/OCP5.git",
     "preview": "assets/printit_preview.webp"
@@ -29,10 +29,19 @@
   {
     "id": 4,
     "slug": "argentbank",
-    "title": "ArgentBank - Application Bancaire",
-    "description": "Frontend développé avec React, connecté à un backend existant. Appels API REST, gestion des états avec Redux, sécurisation des routes côté client.",
+    "title": "ArgentBank",
+    "description": "Application Bancaire - Frontend développé avec React, connecté à un backend existant. Appels API REST, gestion des états avec Redux, sécurisation des routes côté client.",
     "url": "https://dusidea.github.io/P10_FRONT/",
     "github": "https://github.com/Dusidea/P10_FRONT.git",
     "preview": "assets/ArgentBank_preview.webp"
+  },
+  {
+    "id": 5,
+    "slug": "ultron_twitch",
+    "title": "Ultron Twitch",
+    "description": "Application d'extraction de données statistiques de Twitch. Appels API automatisés pour la constitution de données sur un set de catégories Twitch.",
+    "url": "https://github.com/Dusidea/Ultron_twitch.git",
+    "github": "https://github.com/Dusidea/Ultron_twitch.git",
+    "preview": "assets/ultron_preview.webp"
   }
 ]
